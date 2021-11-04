@@ -1,0 +1,235 @@
+/* Colores */
+
+:root{
+    --veryDarkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+body{
+    font-family: 'Spartan', sans-serif;
+}
+
+.left h1{
+    color: var(--veryDarkMagenta);
+}
+
+.left p{
+    color: var(--DarkGrayishMagenta);
+    font-weight: bold;
+}
+
+.texto{
+    font-weight: bold;
+    color: var(--veryDarkMagenta);
+}
+
+.attribution{
+    text-align: center;
+}
+
+
+/* Pantalla grande */
+@media screen and (min-width: 480px) {
+    .container{
+        min-width: 480px;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(/images/bg-pattern-top-desktop.svg);
+        background-repeat: no-repeat;
+        
+    }
+
+    .contenedor-section{
+        max-width: 750px;
+        background-image: url(/images/bg-pattern-bottom-desktop.svg);
+        background-repeat: no-repeat;
+    }
+
+    .arriba{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 90px;
+        margin-bottom: 50px;   
+    }
+
+    .arriba p{
+        font-size: 10px;
+        line-height: 2;
+    }
+
+    .right{
+        display: grid;
+        grid-template-rows: 1fr 35px 35px 35px 1fr;
+        grid-template-columns: repeat(11, 30px);
+        row-gap: 15px;
+    }
+
+    .stats-1{
+        grid-column: 1/10;
+        grid-row: 2/3;
+    }
+
+    .stats-2{
+        grid-row: 3/4;
+        grid-column: 2/11;
+    }
+
+    .stats-3{
+        grid-row: 4/5;
+        grid-column: 3/12;
+    }
+
+    .stats-1, .stats-2, .stats-3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--LightGrayishMagenta);
+        border-radius: 10px;
+    }
+
+    .estrellas{
+        margin-right: 20px;
+    }
+
+
+    .cards-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(13, 20px);
+        column-gap: 25px;
+        min-height: 260px;
+    }
+
+    .buyer-1, .buyer-2, .buyer-3{
+        background-color: var(--veryDarkMagenta);
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 7px;
+    }
+
+    .buyer-1{
+        grid-row: 1/8;
+    }
+
+    .buyer-2{
+        grid-row: 2/9;
+    }
+
+    .buyer-3{
+        grid-row: 3/10;
+    }
+
+    .titulo{
+        display: flex;
+        padding-bottom: 15px;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .titulo span{
+        color: white;
+        font-weight: bold;
+    }
+
+    .verified{
+        color: var(--softPink);
+        margin-top: -3px;
+    }
+
+    .titulo img{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+        margin-bottom: -7px;
+    }
+
+    .opinion{
+        color: white;
+        line-height: 2;
+    }
+}
+
+/* Pantalla chica */
+
+@media screen and (max-width:480px) {
+    
+
+.container{
+    background-color: white;    
+}
+
+.contenedor-section{
+    margin: 30px 15px;
+}
+
+.arriba{
+    text-align: center;
+}
+
+.stats-1, .stats-2, .stats-3{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--LightGrayishMagenta);
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;    
+}
+
+.buyer-1, .buyer-2, .buyer-3{
+    background-color: var(--veryDarkMagenta);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 10px;
+    margin: 25px 0;
+}
+
+.titulo{
+    display: flex;
+    padding-bottom: 15px;
+    justify-content: left;
+    align-items: center;
+}
+
+.titulo span{
+    color: white;
+    font-weight: bold;
+}
+
+.verified{
+    color: var(--softPink);
+    margin-top: -3px;
+}
+
+.titulo img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    margin-bottom: -7px;
+}
+
+.opinion{
+    color: white;
+    line-height: 2;
+}
+
+}
+
